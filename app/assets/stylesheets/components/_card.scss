@@ -1,0 +1,15 @@
+.flat-card {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14);
+  margin: 0.5rem 0 1rem 0;
+  .flat-card-content {
+    background-color: $light-gray;
+    padding: 24px;
+    h4 {
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+  }
+  .flat-card-action {
+    padding: 16px 24px;
+  }
+}

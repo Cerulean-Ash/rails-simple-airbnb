@@ -16,8 +16,16 @@
   <body>
 
     <nav class="navbar navbar-light bg-light justify-content-between">
-      <span class="navbar-brand mx-3 mb-0 h1"><%= link_to 'Simple Airbnb', flats_path, class: "title" %></span>
-      <span class="navbar-brand mx-3 mb-0 h1"><%= link_to 'Add Flat', new_flat_path, class: "btn btn-outline-primary" %></span>
+      <div>
+        <span class="navbar-brand mx-3 mb-0 h1"><%= link_to 'Simple Airbnb', flats_path, class: "title" %></span>
+      </div>
+      <div class='flex align-center'>
+        <%= simple_form_for :search, url: flats_path, method: "GET", html: { class: 'flex', id: 'search-form' } do |f| %>
+          <%= f.input :name, input_html: {value: (params[:search] ? params[:search][:name] : '')}, label:false, placeholder: 'Search' %>
+          <%= f.submit "Search", class: "btn btn-outline-success ms-3" %>
+        <% end %>
+        <span class="mx-3"><%= link_to 'Add Flat', new_flat_path, class: "btn btn-outline-primary align-center" %></span>
+      </div>
     </nav>
 
 

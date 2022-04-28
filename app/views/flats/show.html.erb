@@ -1,0 +1,43 @@
+<div class="image-container">
+  <img src="" alt="">
+</div>
+
+<div class="container margin-top-negative">
+  <div class="show-grid-container">
+    <div class="right-column">
+      <div class="flat-show-card">
+        <h1><%= @flat.name %></h1>
+        <p class='flat-show-address'><%= @flat.address %></p>
+      </div>
+      <div class="flat-show-card">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+      </div>
+      <div class="flat-show-card map">
+        <h2>Map here!!!!!</h2>
+      </div>
+    </div>
+    <div class="left-column">
+      <div class="flat-show-card">
+        <h5>Book this place!</h5>
+        <form action=""></form>
+      </div>
+      <div class="flat-show-card">
+        <h3>Details</h3>
+        <div class="flex">
+          <div class="flex">
+            <i class="material-icons me-2">people</i>
+            <span><%= @flat.number_of_guests %></span>
+          </div>
+          <div class="flex ms-3">
+            <i class="material-icons me-2">currency_pound</i>
+            <span><%= @flat.price_per_night %></span>
+          </div>
+        </div>
+      </div>
+      <div class="flat-show-card">
+      <h6>Share</h6>
+      </div>
+    </div>
+  </div>
+</div>
